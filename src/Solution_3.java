@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-/*链表的反转*/
+/*逆序打印链表*/
 public class Solution_3 {
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList<Integer>reverseList = new ArrayList<Integer>();

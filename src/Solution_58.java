@@ -4,6 +4,19 @@ public class Solution_58 {
     //递归，bfs，dfs
     boolean isSymmetrical(TreeNode pRoot)
     {
-        return true;
+        if(pRoot == null)        return true;
+        return judge(pRoot.left,pRoot.right);
+    }
+    private boolean judge(TreeNode left,TreeNode right){
+        if(left == null){
+            if(right == null){
+                return true;
+            }
+            else
+                return false;
+        }
+        if(right == null)    return false;
+        if(left.val != right.val)    return false;
+        return judge(left.left,right.right) && judge(left.right,right.left);
     }
 }
